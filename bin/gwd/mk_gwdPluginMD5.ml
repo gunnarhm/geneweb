@@ -15,6 +15,7 @@ let md5 plugin =
     in
     loop [] [ Filename.concat plugin @@ "plugin_" ^ Filename.basename plugin ^ ".cmxs"
             ; Filename.concat plugin "assets"
+            ; Filename.concat plugin "META"
             ]
   in
   let files = List.sort compare files in
@@ -47,6 +48,7 @@ let () =
     in
     loop [] [ Filename.concat plugin @@ "plugin_" ^ Filename.basename plugin ^ ".cmxs"
             ; Filename.concat plugin "assets"
+            ; Filename.concat plugin "META"
             ]
   in
   let files = List.sort compare files in
